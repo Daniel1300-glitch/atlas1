@@ -9,4 +9,8 @@ python = "^3.10"
 # other dependencies here
 
 [tool.poetry.group.dev.dependencies]
+python = "^3.10"
+uvicorn = "^0.22.0"  # or latest stable version
+fastapi = "^0.95.0"  # if you’re using FastAPI, add this too
+# other dependencies
 # dev dependencies here
