@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: atlas1-backend
+    env: python
+    region: oregon
+    plan: starter
+    branch: main
+    buildCommand: "poetry install"
+    startCommand: "uvicorn backend_app:app --host 0.0.0.0 --port 8000"
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.10"
+
+  - type: static-site
+    name: atlas1-frontend
+    branch: main
+    buildCommand: "npm install && npm run build"
+    staticPublishPath: "dist"
+    envVars: []
