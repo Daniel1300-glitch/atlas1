@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "your-project-name"
+name = "atlas1-backend"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
@@ -8,5 +8,5 @@ authors = ["Your Name <you@example.com>"]
 python = "^3.10"
 # other dependencies here
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 # dev dependencies here
