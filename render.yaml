@@ -6,14 +6,16 @@ services:
     plan: starter
     branch: main
     buildCommand: "poetry install"
-    startCommand: "uvicorn backend_app:app --host 0.0.0.0 --port 8000"
+    startCommand: "cd backend && uvicorn backend_app:app --host 0.0.0.0 --port 8000"
     envVars:
       - key: PYTHON_VERSION
-        value: "3.10"
+        value: "3.10.0"
+      - key: PORT
+        value: "8000"
 
   - type: static-site
     name: atlas1-frontend
     branch: main
-    buildCommand: "npm install && npm run build"
-    staticPublishPath: "dist"
+    buildCommand: "cd frontend/atlas-stroke-navigator && npm install && npm run build"
+    staticPublishPath: "frontend/atlas-stroke-navigator/dist"
     envVars: []
