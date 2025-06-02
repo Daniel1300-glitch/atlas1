@@ -3,15 +3,21 @@ name = "atlas1-backend"
 version = "0.1.0"
 description = ""
 authors = ["Your Name <you@example.com>"]
+readme = ""
 
 [tool.poetry.dependencies]
 python = "^3.10"
-# other dependencies here
+fastapi = "0.95.2"
+uvicorn = "0.22.0"
+joblib = "1.5.1"
+pandas = "1.5.3"
+numpy = "1.24.3"
+pydantic = "1.10.11"
+starlette = "0.27.0"
 
-[tool.poetry.group.dev.dependencies]
-python = "^3.10"
-joblib = "^1.2.0"
-uvicorn = "^0.22.0"  # or latest stable version
-fastapi = "^0.95.0"  # if you’re using FastAPI, add this too
-# other dependencies
-# dev dependencies here
+[tool.poetry.dev-dependencies]
+# put dev dependencies like pytest here, if any
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
